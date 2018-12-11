@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TripPlanner</string>
+    <string name="text_number_of_results">Number of Results: </string>
+    <string name="text_travel_class">Travel Class: </string>
+    <string name="text_return_date">Return Date: </string>
+    <string name="text_departure_date">Departure Date: </string>
+    <string name="text_destination">Destination: </string>
+    <string name="text_origin">Origin: </string>
+</resources>

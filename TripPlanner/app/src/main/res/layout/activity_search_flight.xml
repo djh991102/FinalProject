@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_flight_background"
+    tools:context=".SearchFlight">
+
+    <TextView
+        android:id="@+id/text_search_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="ORIGIN: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/search_origin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/search_origin"/>
+    <EditText
+        android:id="@+id/search_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ENTER ORIGIN"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="#c5060b45"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_search_origin"
+        android:background="#b3ffffff"/>
+    <TextView
+        android:id="@+id/text_search_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="DESTINATION: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_search_destination"
+        app:layout_constraintBaseline_toBaselineOf="@id/search_destination"/>
+    <EditText
+        android:id="@+id/search_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ENTER DESTINATION"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="#c5060b45"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_origin"
+        app:layout_constraintStart_toEndOf="@+id/text_search_destination"
+        android:background="#b3ffffff"/>
+    <TextView
+        android:id="@+id/text_search_departure_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="DEPARTURE DATE: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_search_destination"
+        app:layout_constraintBaseline_toBaselineOf="@id/search_departure_date"/>
+    <EditText
+        android:id="@+id/search_departure_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="#c5060b45"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_destination"
+        app:layout_constraintStart_toEndOf="@+id/text_search_departure_date"
+        android:background="#b3ffffff"/>
+    <TextView
+        android:id="@+id/text_search_return_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="RETURN DATE: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_search_departure_date"
+        app:layout_constraintBaseline_toBaselineOf="@id/search_return_date"/>
+    <EditText
+        android:id="@+id/search_return_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="#c5060b45"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_departure_date"
+        app:layout_constraintStart_toEndOf="@+id/text_search_return_date"
+        android:background="#b3ffffff"/>
+
+    <RadioGroup
+        android:id="@+id/travel_class_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_search_return_date"
+        app:layout_constraintBottom_toTopOf="@+id/button3">
+
+        <RadioButton
+            android:id="@+id/button_economy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECONOMY"
+            android:textColor="#c5060b45"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/button_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSINESS"
+            android:textColor="#c5060b45"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/button_first_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIRST"
+            android:textColor="#c5060b45"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="#c56970c7"
+        android:onClick="showFlights"
+        android:padding="14dp"
+        android:text="SEARCH YOUR FLIGHT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        android:onClick="Save"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travel_class_group" />
+
+
+</android.support.constraint.ConstraintLayout>
